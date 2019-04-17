@@ -14,7 +14,7 @@ Part 3: Communicate between two apps
 
 ### guiding principles
 
-Taboola are looking for code that is:
+Taboola is looking for code that is:
 Working
 Readable
 Tested (please submit unit testing)
@@ -38,4 +38,4 @@ Give the example
 
 * https://s3-us-west-2.amazonaws.com/taboola-mobile-sdk/public/home_assignment/data.json
 * https://github.com/taboola/taboola-ios
-* etc
+
