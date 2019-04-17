@@ -8,18 +8,18 @@ The goal of this repo is to show my programming style and abilities to Taboola's
 
 I have chosen to write this test with Swift lang.
 3 Parts to accomplish:
-Part 1: Load json to collectionView
-Part 2: Add TaboolaView to collectionView
-Part 3: Communicate between two apps
+* Part 1: Load json to collectionView
+* Part 2: Add TaboolaView to collectionView
+* Part 3: Communicate between two apps
 
 ### guiding principles
 
-Taboola is looking for code that is:
-Working
-Readable
-Tested (please submit unit testing)
-Well designed (Object Oriented)
-Simple
+* Taboola is looking for code that is:
+* Working
+* Readable
+* Tested (please submit unit testing)
+* Well designed (Object Oriented)
+* Simple
 
 ```
 Give the example
