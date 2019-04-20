@@ -13,6 +13,9 @@
 		FBE7E3E1226B6266007006E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBE7E3E0226B6266007006E5 /* Assets.xcassets */; };
 		FBE7E3E4226B6266007006E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBE7E3E2226B6266007006E5 /* LaunchScreen.storyboard */; };
 		FBE7E3EF226B6266007006E5 /* TaboolaHomeAssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7E3EE226B6266007006E5 /* TaboolaHomeAssignmentTests.swift */; };
+		FBE7E3FB226B63C2007006E5 /* Amazon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7E3FA226B63C2007006E5 /* Amazon.swift */; };
+		FBE7E3FE226B654F007006E5 /* AmazonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7E3FD226B654F007006E5 /* AmazonCell.swift */; };
+		FBE7E401226B65AA007006E5 /* CustomUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE7E400226B65AA007006E5 /* CustomUIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		FBE7E3EA226B6266007006E5 /* TaboolaHomeAssignmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaboolaHomeAssignmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBE7E3EE226B6266007006E5 /* TaboolaHomeAssignmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaboolaHomeAssignmentTests.swift; sourceTree = "<group>"; };
 		FBE7E3F0226B6266007006E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBE7E3FA226B63C2007006E5 /* Amazon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amazon.swift; sourceTree = "<group>"; };
+		FBE7E3FD226B654F007006E5 /* AmazonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazonCell.swift; sourceTree = "<group>"; };
+		FBE7E400226B65AA007006E5 /* CustomUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +84,13 @@
 			isa = PBXGroup;
 			children = (
 				FBE7E3D9226B6265007006E5 /* AppDelegate.swift */,
-				FBE7E3DB226B6265007006E5 /* ViewController.swift */,
-				FBE7E3DD226B6265007006E5 /* Main.storyboard */,
-				FBE7E3E0226B6266007006E5 /* Assets.xcassets */,
-				FBE7E3E2226B6266007006E5 /* LaunchScreen.storyboard */,
 				FBE7E3E5226B6266007006E5 /* Info.plist */,
+				FBE7E404226B6627007006E5 /* Supporting files */,
+				FBE7E403226B660B007006E5 /* Storyboards */,
+				FBE7E3FF226B657E007006E5 /* Extensions */,
+				FBE7E3F9226B63A9007006E5 /* Model */,
+				FBE7E3FC226B6524007006E5 /* View */,
+				FBE7E402226B65DF007006E5 /* Controller */,
 			);
 			path = TaboolaHomeAssignment;
 			sourceTree = "<group>";
@@ -94,6 +102,55 @@
 				FBE7E3F0226B6266007006E5 /* Info.plist */,
 			);
 			path = TaboolaHomeAssignmentTests;
+			sourceTree = "<group>";
+		};
+		FBE7E3F9226B63A9007006E5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBE7E3FA226B63C2007006E5 /* Amazon.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBE7E3FC226B6524007006E5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FBE7E3FD226B654F007006E5 /* AmazonCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FBE7E3FF226B657E007006E5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FBE7E400226B65AA007006E5 /* CustomUIImageView.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FBE7E402226B65DF007006E5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FBE7E3DB226B6265007006E5 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FBE7E403226B660B007006E5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				FBE7E3DD226B6265007006E5 /* Main.storyboard */,
+				FBE7E3E2226B6266007006E5 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FBE7E404226B6627007006E5 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				FBE7E3E0226B6266007006E5 /* Assets.xcassets */,
+			);
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +255,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBE7E3DC226B6265007006E5 /* ViewController.swift in Sources */,
+				FBE7E401226B65AA007006E5 /* CustomUIImageView.swift in Sources */,
+				FBE7E3FE226B654F007006E5 /* AmazonCell.swift in Sources */,
 				FBE7E3DA226B6265007006E5 /* AppDelegate.swift in Sources */,
+				FBE7E3FB226B63C2007006E5 /* Amazon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
