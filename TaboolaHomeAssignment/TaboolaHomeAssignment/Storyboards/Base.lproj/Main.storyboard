@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="b3Z-67-LOA">
             <objects>
-                <viewController id="Gs9-dE-Q2L" customClass="ViewController" customModule="Part1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Gs9-dE-Q2L" customClass="ViewController" customModule="TaboolaHomeAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mIa-Fh-QbJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="AmazonCell" id="oHT-pp-GdG" customClass="AmazonCell" customModule="Part1" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="AmazonCell" id="oHT-pp-GdG" customClass="AmazonCell" customModule="TaboolaHomeAssignment" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="297"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -85,6 +85,26 @@
                                             <outlet property="thumnailImageView" destination="44L-Ph-qGi" id="dC0-tT-PPr"/>
                                             <outlet property="widthConstraint" destination="wDn-we-sh2" id="vss-1C-KYz"/>
                                         </connections>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TaboolaCell" id="uCS-Ot-Wx0" customClass="TaboolaCell" customModule="TaboolaHomeAssignment" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="307" width="414" height="297"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="297"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="23Q-6I-u3y" customClass="TaboolaView">
+                                                    <rect key="frame" x="8" y="52" width="398" height="237"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="23Q-6I-u3y" secondAttribute="trailing" id="K5R-VS-XKe"/>
+                                            <constraint firstItem="23Q-6I-u3y" firstAttribute="leading" secondItem="uCS-Ot-Wx0" secondAttribute="leadingMargin" id="dg6-kf-9fV"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="23Q-6I-u3y" secondAttribute="bottom" id="fd3-da-sEJ"/>
+                                            <constraint firstItem="23Q-6I-u3y" firstAttribute="top" secondItem="uCS-Ot-Wx0" secondAttribute="topMargin" id="uBg-6v-2MM"/>
+                                        </constraints>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
