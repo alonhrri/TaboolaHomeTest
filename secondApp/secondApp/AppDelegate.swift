@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  TaboolaHomeAssignment
+//  secondApp
 //
-//  Created by Alon Harari on 20/04/2019.
+//  Created by Alon Harari on 21/04/2019.
 //  Copyright © 2019 Alon Harari. All rights reserved.
 //
 
@@ -12,26 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
-        let host = urlComponents?.host ?? ""
-        if host == "viewController" {
-            setRootView(urlComponents: urlComponents)
-        }
-        return true
-    }
-    
-    func setRootView(urlComponents:URLComponents?) {
-        
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let viewController = mainStoryboard.instantiateViewController(withIdentifier: "vc") as? ViewController else { return }
-        viewController.colorStr = urlComponents?.queryItems?.first?.value
-        let navigationController = UINavigationController(rootViewController: viewController)
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-    }
+
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
@@ -52,7 +34,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-       
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 

@@ -28,10 +28,10 @@ class AmazonCell: UICollectionViewCell {
         self.contentView.translatesAutoresizingMaskIntoConstraints = false
         let screenWidth = UIScreen.main.bounds.size.width
         widthConstraint.constant = screenWidth
-        descriptionLabel.backgroundColor = UIColor.white
+        descriptionLabel.backgroundColor = UIColor.clear
         nameLabel.font = UIFont.boldSystemFont(ofSize: 16.0)
         descriptionLabel.sizeToFit()
-        nameLabel.backgroundColor = UIColor.white
+        nameLabel.backgroundColor = UIColor.clear
         nameLabel.lineBreakMode = .byWordWrapping
         descriptionLabel.lineBreakMode = .byWordWrapping
         nameLabel.translatesAutoresizingMaskIntoConstraints = false

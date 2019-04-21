@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Amazon News-->
         <scene sceneID="b3Z-67-LOA">
             <objects>
-                <viewController id="Gs9-dE-Q2L" customClass="ViewController" customModule="TaboolaHomeAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="vc" id="Gs9-dE-Q2L" customClass="ViewController" customModule="TaboolaHomeAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mIa-Fh-QbJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +122,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BiU-gL-94V"/>
                     </view>
-                    <navigationItem key="navigationItem" id="GzS-d5-x1i"/>
+                    <navigationItem key="navigationItem" title="Amazon News" largeTitleDisplayMode="always" id="GzS-d5-x1i">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Qca-UL-8hZ">
+                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="goToSecondApp:" destination="Gs9-dE-Q2L" id="tcD-KA-6zK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="OUy-Yj-orz" id="9sU-Ds-H14"/>
                     </connections>
@@ -134,18 +141,21 @@
         <!--Navigation Controller-->
         <scene sceneID="D7m-CD-B7Y">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B7R-Oq-u7D" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rW0-Rj-blY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="nc" automaticallyAdjustsScrollViewInsets="NO" id="B7R-Oq-u7D" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K8T-dL-lOz">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="K8T-dL-lOz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="Gs9-dE-Q2L" kind="relationship" relationship="rootViewController" id="CPC-rG-1zG"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rW0-Rj-blY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="40.579710144927539" y="20.089285714285712"/>
         </scene>

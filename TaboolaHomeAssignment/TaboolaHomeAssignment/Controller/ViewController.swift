@@ -10,17 +10,22 @@
 import UIKit
 import TaboolaSDK
 
-
 //MARK: - Class
 class ViewController: UIViewController {
     
+    @IBAction func goToSecondApp(_ sender: Any) {
+        chooseColor()
+    }
+    
     //MARK: - Properties of class
     @IBOutlet weak var collectionView: UICollectionView!
+    var colorStr : String?
     var items = [Amazon]()
     
-    var taboolaWidget: TaboolaView!
-    var taboolaFeed: TaboolaView!
+    var taboolaWidget : TaboolaView!
+    var taboolaFeed : TaboolaView!
     var taboolaWidgetHeight: CGFloat = 0.0
+    
     fileprivate struct TaboolaRow{
         let placement: String
         let mode: String
@@ -32,6 +37,11 @@ class ViewController: UIViewController {
     }
     
     //MARK: - ViewController LifeCycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        setColor()
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +51,7 @@ class ViewController: UIViewController {
         taboolaFeed = taboolaView(mode: TaboolaRow.feed.mode,
                                   placement: TaboolaRow.feed.placement,
                                   scrollIntercept: TaboolaRow.feed.scrollIntercept)
+        //setColor()
         fetchJSON()
     }
     // MARK: - Taboola methods
@@ -48,21 +59,15 @@ class ViewController: UIViewController {
     func taboolaView(mode: String, placement: String, scrollIntercept: Bool) -> TaboolaView {
         let taboolaView = TaboolaView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 200))
         taboolaView.delegate = self
-        // An identification of a Taboola recommendation unit UI template
         taboolaView.mode = mode
-        // An identification of your publisher account on the Taboola system
         taboolaView.publisher = "sdk-tester"
-        // Sets the page type of the page on which the widget is displayed
         taboolaView.pageType = "article"
-        // Sets the canonical URL for the page on which the widget is displayed
         taboolaView.pageUrl = "http://www.example.com"
-        // An identification of a specific placement in the app
         taboolaView.placement = placement
         taboolaView.targetType = "mix"
         taboolaView.setInterceptScroll(scrollIntercept)
         taboolaView.logLevel = .debug
         taboolaView.setOptionalModeCommands(["useOnlineTemplate": true])
-        // After initializing the TaboolaView, this method should be called to actually fetch the recommendations
         taboolaView.fetchContent()
         
         
@@ -78,6 +83,18 @@ class ViewController: UIViewController {
         taboolaFeed.reset()
     }
     // MARK: - Private methods
+    
+    fileprivate func setColor() {
+        
+        if let color = colorStr {
+            let array = color.components(separatedBy: ",").map{
+                ($0 as NSString).floatValue}
+            let chossenColor = UIColor(red: CGFloat(array[0]/255), green: CGFloat(array[1]/255), blue: CGFloat(array[2]/255), alpha: 1)
+            self.collectionView.backgroundColor = chossenColor
+            self.taboolaWidget.backgroundColor = chossenColor
+            self.taboolaFeed.backgroundColor = chossenColor
+        }
+    }
     fileprivate func fetchJSON() {
         let urlString = "https://api.myjson.com/bins/ct1nw"
         guard let url = URL(string: urlString) else { return }
@@ -111,6 +128,18 @@ class ViewController: UIViewController {
         cell.descriptionLabel.text = item.description
         if let url = item.thumbnail{
             cell.thumnailImageView.loadImageUsingCacheWithURLString(url, placeHolder: UIImage(named: "placeholder"))
+        }
+    }
+    fileprivate func chooseColor() {
+        
+        let application = UIApplication.shared
+        let secondAppPath = "secondApp://"
+        let appUrl = URL(string: secondAppPath)!
+        let websiteUrl = URL(string: "https://taboola.com")!
+        if application.canOpenURL(appUrl) {
+            application.open(appUrl, options: [:], completionHandler: nil)
+        } else {
+            application.open(websiteUrl)
         }
     }
     
@@ -219,4 +248,5 @@ extension ViewController: TaboolaViewDelegate {
         return true
     }
 }
+
 

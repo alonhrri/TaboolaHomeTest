@@ -119,7 +119,7 @@
 			children = (
 				FBE7E3D9226B6265007006E5 /* AppDelegate.swift */,
 				FBE7E3E5226B6266007006E5 /* Info.plist */,
-				FBE7E404226B6627007006E5 /* Supporting files */,
+				FBE7E3E0226B6266007006E5 /* Assets.xcassets */,
 				FBE7E403226B660B007006E5 /* Storyboards */,
 				FBE7E3FF226B657E007006E5 /* Extensions */,
 				FBE7E3F9226B63A9007006E5 /* Model */,
@@ -178,14 +178,6 @@
 				FBE7E3E2226B6266007006E5 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		FBE7E404226B6627007006E5 /* Supporting files */ = {
-			isa = PBXGroup;
-			children = (
-				FBE7E3E0226B6266007006E5 /* Assets.xcassets */,
-			);
-			path = "Supporting files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
