@@ -19,54 +19,91 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bkv-nO-IIW">
-                                <rect key="frame" x="16" y="651" width="15" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="16" y="651" width="16" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="JCP-Sm-TqE">
-                                <rect key="frame" x="37" y="648" width="363" height="31"/>
+                                <rect key="frame" x="38" y="648" width="362" height="31"/>
+                                <color key="tintColor" red="0.11320293694734573" green="0.44812077283859253" blue="0.71940362453460693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="sliderChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="qan-yB-OWs"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ocf-dv-2iN">
-                                <rect key="frame" x="16" y="692" width="17.5" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="16" y="692" width="18" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="WOh-iW-LRL">
-                                <rect key="frame" x="39.5" y="690" width="360.5" height="31"/>
+                                <rect key="frame" x="40" y="690" width="360" height="31"/>
+                                <color key="tintColor" red="0.11320293694734573" green="0.44812077283859253" blue="0.71940362453460693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="sliderChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="vUJ-TV-Pug"/>
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y6Z-eo-XA7">
-                                <rect key="frame" x="16" y="733" width="15" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <rect key="frame" x="16" y="733" width="16" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" red="0.1132029369" green="0.44812077280000001" blue="0.71940362449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="255" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="RPG-cn-BuG">
-                                <rect key="frame" x="37" y="732" width="363" height="31"/>
+                                <rect key="frame" x="38" y="732" width="362" height="31"/>
+                                <color key="tintColor" red="0.11320293694734573" green="0.44812077283859253" blue="0.71940362453460693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.1132029369" green="0.44812077280000001" blue="0.71940362449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="sliderChangeValue:" destination="BYZ-38-t0r" eventType="valueChanged" id="Id4-GV-uZj"/>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6L-of-oPy">
                                 <rect key="frame" x="16" y="786" width="382" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.11477988213300705" green="0.44812244176864624" blue="0.71940195560455322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="aHV-kK-g7j"/>
                                 </constraints>
-                                <state key="normal" title="Send Color">
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="23"/>
+                                <state key="normal" title="SEND">
                                     <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="sendColor:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VJB-eJ-AGv"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Taboola logo" translatesAutoresizingMaskIntoConstraints="NO" id="TCI-NK-GZR">
+                                <rect key="frame" x="157" y="310" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Mdk-cl-RQF"/>
+                                    <constraint firstAttribute="width" constant="100" id="d8H-9f-CcX"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRv-EL-xkP">
+                                <rect key="frame" x="254" y="304" width="105.5" height="83"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="68"/>
+                                <color key="textColor" red="0.1128375903" green="0.4480816722" blue="0.7234757543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7J-Nx-n0y">
+                                <rect key="frame" x="55.5" y="304" width="106.5" height="83"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="68"/>
+                                <color key="textColor" red="0.1128375903" green="0.4480816722" blue="0.7234757543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COLOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktb-Qj-rFh">
+                                <rect key="frame" x="141.5" y="427" width="131" height="42"/>
+                                <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="34"/>
+                                <color key="textColor" red="0.1128375903" green="0.4480816722" blue="0.7234757543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -77,14 +114,22 @@
                             <constraint firstItem="RPG-cn-BuG" firstAttribute="top" secondItem="WOh-iW-LRL" secondAttribute="bottom" constant="12" id="5D6-yS-qwF"/>
                             <constraint firstItem="f6L-of-oPy" firstAttribute="top" secondItem="RPG-cn-BuG" secondAttribute="bottom" constant="24" id="8lo-p7-4Ur"/>
                             <constraint firstItem="f6L-of-oPy" firstAttribute="top" secondItem="y6Z-eo-XA7" secondAttribute="bottom" constant="24" id="C5e-C2-u4a"/>
+                            <constraint firstItem="TCI-NK-GZR" firstAttribute="leading" secondItem="g7J-Nx-n0y" secondAttribute="trailing" constant="-5" id="GY3-NP-g6k"/>
                             <constraint firstItem="bkv-nO-IIW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="LNP-Bd-yqR"/>
+                            <constraint firstItem="TRv-EL-xkP" firstAttribute="top" secondItem="TCI-NK-GZR" secondAttribute="top" constant="-6" id="P5p-P7-OQz"/>
+                            <constraint firstItem="ktb-Qj-rFh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PAF-jT-i3P"/>
                             <constraint firstItem="WOh-iW-LRL" firstAttribute="leading" secondItem="ocf-dv-2iN" secondAttribute="trailing" constant="8" id="QJN-Dv-tA3"/>
+                            <constraint firstItem="g7J-Nx-n0y" firstAttribute="top" secondItem="TCI-NK-GZR" secondAttribute="top" constant="-6" id="SG7-BS-mgd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WOh-iW-LRL" secondAttribute="trailing" constant="16" id="SIP-Ye-2UA"/>
                             <constraint firstItem="bkv-nO-IIW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="TWW-dT-g0A"/>
+                            <constraint firstItem="ktb-Qj-rFh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UOw-RY-UVT"/>
+                            <constraint firstItem="ktb-Qj-rFh" firstAttribute="top" secondItem="TCI-NK-GZR" secondAttribute="bottom" constant="17" id="XAm-6o-7SJ"/>
+                            <constraint firstItem="TRv-EL-xkP" firstAttribute="leading" secondItem="TCI-NK-GZR" secondAttribute="trailing" constant="-3" id="XbK-Lo-fyV"/>
                             <constraint firstItem="RPG-cn-BuG" firstAttribute="leading" secondItem="y6Z-eo-XA7" secondAttribute="trailing" constant="8" id="ay0-lp-4Mv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RPG-cn-BuG" secondAttribute="trailing" constant="16" id="bRK-B8-9gH"/>
                             <constraint firstItem="y6Z-eo-XA7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nJs-wn-rLf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JCP-Sm-TqE" secondAttribute="trailing" constant="16" id="pgI-0q-L96"/>
+                            <constraint firstItem="TCI-NK-GZR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="r2c-hY-5Pe"/>
                             <constraint firstItem="ocf-dv-2iN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="tuU-kl-Rm8"/>
                             <constraint firstItem="JCP-Sm-TqE" firstAttribute="leading" secondItem="bkv-nO-IIW" secondAttribute="trailing" constant="8" id="tvp-UA-9HB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f6L-of-oPy" secondAttribute="bottom" constant="26" id="v7S-V4-9jn"/>
@@ -100,7 +145,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="288" y="194"/>
+            <point key="canvasLocation" x="286.95652173913044" y="193.52678571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Taboola logo" width="615" height="480"/>
+    </resources>
 </document>

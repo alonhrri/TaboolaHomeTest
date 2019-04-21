@@ -29,6 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         guard let viewController = mainStoryboard.instantiateViewController(withIdentifier: "vc") as? ViewController else { return }
         viewController.colorStr = urlComponents?.queryItems?.first?.value
         let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.navigationBar.prefersLargeTitles = true
+        navigationController.navigationBar.barStyle = .black
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }

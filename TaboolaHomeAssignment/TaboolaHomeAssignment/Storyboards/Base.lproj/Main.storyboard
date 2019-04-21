@@ -124,7 +124,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Amazon News" largeTitleDisplayMode="always" id="GzS-d5-x1i">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Qca-UL-8hZ">
-                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="goToSecondApp:" destination="Gs9-dE-Q2L" id="tcD-KA-6zK"/>
                             </connections>
@@ -147,9 +147,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="K8T-dL-lOz">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
