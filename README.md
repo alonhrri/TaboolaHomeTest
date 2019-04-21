@@ -6,6 +6,10 @@ The goal of this repo is to show my programming style and abilities to Taboola's
 
 ## App Preview 
 ![app-preview-_online-video-cutter com_](https://user-images.githubusercontent.com/46203312/56473141-90808500-646f-11e9-8a05-df93863b69ef.gif)
+
+
+![app-preview-_online-video-cutter com_-_2_](https://user-images.githubusercontent.com/46203312/56473242-e43f9e00-6470-11e9-819d-5820049c61b0.gif)
+
 ## Getting Started
 
 I have chosen to write this test with Swift lang.
