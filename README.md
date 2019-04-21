@@ -10,7 +10,7 @@ I have chosen to write this test with Swift lang.
 3 Parts to accomplish:
 * Part 1: Load json to collectionView
 * Part 2: Add TaboolaView to collectionView
-* Part 3: Communicate between two apps
+* Part 3: Communicate between two apps with deep linking
 
 ### guiding principles
 
@@ -21,21 +21,13 @@ I have chosen to write this test with Swift lang.
 * Well designed (Object Oriented)
 * Simple
 
-```
-Give the example
-```
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
 ## Authors
 
-* **Alon Harari** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Alon Harari**
 
 ## Reference 
 
 * https://s3-us-west-2.amazonaws.com/taboola-mobile-sdk/public/home_assignment/data.json
 * https://github.com/taboola/taboola-ios
+* http://myjson.com/
 
