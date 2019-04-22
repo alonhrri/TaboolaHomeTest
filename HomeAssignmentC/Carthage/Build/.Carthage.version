@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "2.1.3",
+  "iOS" : [
+    {
+      "name" : "TaboolaFramework",
+      "hash" : "bde7efb13e145072d535f36b52707e8209976fb18292b8b46b614f77a19df0f1"
+    }
+  ]
+}

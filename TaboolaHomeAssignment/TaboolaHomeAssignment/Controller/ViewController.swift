@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     var taboolaFeed : TaboolaView!
     var taboolaWidgetHeight: CGFloat = 0.0
     
-    fileprivate struct TaboolaRow{
+    fileprivate struct TaboolaRow {
         let placement: String
         let mode: String
         let index: Int
@@ -59,16 +59,19 @@ class ViewController: UIViewController {
     func taboolaView(mode: String, placement: String, scrollIntercept: Bool) -> TaboolaView {
         let taboolaView = TaboolaView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 200))
         taboolaView.delegate = self
+        taboolaView.ownerViewController = self
         taboolaView.mode = mode
         taboolaView.publisher = "sdk-tester"
         taboolaView.pageType = "article"
-        taboolaView.pageUrl = "http://www.example.com"
+        taboolaView.pageUrl = "https://www.ynet.co.il"
         taboolaView.placement = placement
         taboolaView.targetType = "mix"
         taboolaView.setInterceptScroll(scrollIntercept)
         taboolaView.logLevel = .debug
         taboolaView.setOptionalModeCommands(["useOnlineTemplate": true])
         taboolaView.fetchContent()
+        taboolaView.autoResizeHeight = true
+
         
         
         taboolaView.setProgressBarEnabled(true)
@@ -96,6 +99,7 @@ class ViewController: UIViewController {
         }
     }
     fileprivate func fetchJSON() {
+        //let urlString = "https://s3-us-west-2.amazonaws.com/taboola-mobile-sdk/public/home_assignment/data.json"
         let urlString = "https://api.myjson.com/bins/ct1nw"
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, response, err) in

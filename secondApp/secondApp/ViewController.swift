@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         print(RGBcolor)
         let RGBstr = "\(RGBcolor["R"] ?? 255),\(RGBcolor["G"] ?? 255),\(RGBcolor["B"] ?? 255)"
         let application = UIApplication.shared
-        let homeTestAppPath = "homeTest://viewController?color=\(RGBstr)"
+        let homeTestAppPath = "homeTestC://viewController?color=\(RGBstr)"
         let appUrl = URL(string: homeTestAppPath)!
         let websiteUrl = URL(string: "https://taboola.com")!
         if application.canOpenURL(appUrl) {

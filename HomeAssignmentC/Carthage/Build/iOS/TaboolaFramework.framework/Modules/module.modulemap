@@ -1,0 +1,6 @@
+framework module TaboolaFramework {
+  umbrella header "TaboolaFramework.h"
+
+  export *
+  module * { export * }
+}
