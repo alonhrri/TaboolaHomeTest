@@ -45,7 +45,9 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        if let myString = UIPasteboard.general.string {
+            self.colorStr = myString
+        }
         taboolaWidget = taboolaView(mode: TaboolaRow.widget.mode,
                                     placement: TaboolaRow.widget.placement,
                                     scrollIntercept: TaboolaRow.widget.scrollIntercept)

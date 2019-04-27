@@ -122,14 +122,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BiU-gL-94V"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Amazon News" largeTitleDisplayMode="always" id="GzS-d5-x1i">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Qca-UL-8hZ">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="goToSecondApp:" destination="Gs9-dE-Q2L" id="tcD-KA-6zK"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Amazon News" largeTitleDisplayMode="always" id="GzS-d5-x1i"/>
                     <connections>
                         <outlet property="collectionView" destination="OUy-Yj-orz" id="9sU-Ds-H14"/>
                     </connections>
@@ -141,7 +134,6 @@
         <!--Navigation Controller-->
         <scene sceneID="D7m-CD-B7Y">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rW0-Rj-blY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="nc" automaticallyAdjustsScrollViewInsets="NO" id="B7R-Oq-u7D" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" largeTitles="YES" id="K8T-dL-lOz">
@@ -153,6 +145,7 @@
                         <segue destination="Gs9-dE-Q2L" kind="relationship" relationship="rootViewController" id="CPC-rG-1zG"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rW0-Rj-blY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="40.579710144927539" y="20.089285714285712"/>
         </scene>

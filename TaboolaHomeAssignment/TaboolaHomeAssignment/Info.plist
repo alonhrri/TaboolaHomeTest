@@ -45,16 +45,10 @@
 	<array>
 		<dict>
 			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>homeTest</string>
-			</array>
+			<array/>
 			<key>CFBundleURLName</key>
 			<string></string>
 		</dict>
-	</array>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>secondApp</string>
 	</array>
 </dict>
 </plist>

@@ -13,27 +13,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
-        let host = urlComponents?.host ?? ""
-        if host == "viewController" {
-            setRootView(urlComponents: urlComponents)
-        }
-        return true
-    }
+//    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+//        
+//        let urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: true)
+//        let host = urlComponents?.host ?? ""
+//        if host == "viewController" {
+//            setRootView(urlComponents: urlComponents)
+//        }
+//        return true
+//    }
     
-    func setRootView(urlComponents:URLComponents?) {
-        
-        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        guard let viewController = mainStoryboard.instantiateViewController(withIdentifier: "vc") as? ViewController else { return }
-        viewController.colorStr = urlComponents?.queryItems?.first?.value
-        let navigationController = UINavigationController(rootViewController: viewController)
-        navigationController.navigationBar.prefersLargeTitles = true
-        navigationController.navigationBar.barStyle = .black
-        window?.rootViewController = navigationController
-        window?.makeKeyAndVisible()
-    }
+//    func setRootView(urlComponents:URLComponents?) {
+//
+//        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        guard let viewController = mainStoryboard.instantiateViewController(withIdentifier: "vc") as? ViewController else { return }
+//        viewController.colorStr = urlComponents?.queryItems?.first?.value
+//        let navigationController = UINavigationController(rootViewController: viewController)
+//        navigationController.navigationBar.prefersLargeTitles = true
+//        navigationController.navigationBar.barStyle = .black
+//        window?.rootViewController = navigationController
+//        window?.makeKeyAndVisible()
+//    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

@@ -13,13 +13,11 @@ import TaboolaSDK
 //MARK: - Class
 class ViewController: UIViewController {
     
-    @IBAction func goToSecondApp(_ sender: Any) {
-        chooseColor()
-    }
+
     
     //MARK: - Properties of class
     @IBOutlet weak var collectionView: UICollectionView!
-    var colorStr : String?
+    var colorStr : UIColor?
     var items = [Amazon]()
     
     var taboolaWidget : TaboolaView!
@@ -36,22 +34,19 @@ class ViewController: UIViewController {
         static let feed = TaboolaRow(placement: "Feed without video", mode: "thumbs-feed-01", index: 8, scrollIntercept: true)
     }
     
-    //MARK: - ViewController LifeCycle
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        setColor()
 
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(willEnterForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        
+
         taboolaWidget = taboolaView(mode: TaboolaRow.widget.mode,
                                     placement: TaboolaRow.widget.placement,
                                     scrollIntercept: TaboolaRow.widget.scrollIntercept)
         taboolaFeed = taboolaView(mode: TaboolaRow.feed.mode,
                                   placement: TaboolaRow.feed.placement,
                                   scrollIntercept: TaboolaRow.feed.scrollIntercept)
-        //setColor()
         fetchJSON()
     }
     // MARK: - Taboola methods
@@ -71,7 +66,7 @@ class ViewController: UIViewController {
         taboolaView.setOptionalModeCommands(["useOnlineTemplate": true])
         taboolaView.fetchContent()
         taboolaView.autoResizeHeight = true
-
+        
         
         
         taboolaView.setProgressBarEnabled(true)
@@ -87,15 +82,23 @@ class ViewController: UIViewController {
     }
     // MARK: - Private methods
     
+    @objc func willEnterForeground() {
+        if let customColor = UIPasteboard.general.color {
+            colorStr = customColor
+        }
+        setColor()
+    }
     fileprivate func setColor() {
         
         if let color = colorStr {
-            let array = color.components(separatedBy: ",").map{
-                ($0 as NSString).floatValue}
-            let chossenColor = UIColor(red: CGFloat(array[0]/255), green: CGFloat(array[1]/255), blue: CGFloat(array[2]/255), alpha: 1)
-            self.collectionView.backgroundColor = chossenColor
-            self.taboolaWidget.backgroundColor = chossenColor
-            self.taboolaFeed.backgroundColor = chossenColor
+
+            self.collectionView.backgroundColor = color
+            self.taboolaWidget.backgroundColor = color
+            self.taboolaFeed.backgroundColor = color
+            
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
     }
     fileprivate func fetchJSON() {
@@ -155,12 +158,19 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.items.count
     }
+
+    
+    
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.row {
         case TaboolaRow.widget.index:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TaboolaCell", for: indexPath) as? TaboolaCell ?? TaboolaCell()
+            taboolaWidget.backgroundColor = colorStr
             cell.contentView.addSubview(taboolaWidget)
+            cell.backgroundColor = colorStr
             return cell
         case TaboolaRow.feed.index:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TaboolaCell", for: indexPath) as? TaboolaCell ?? TaboolaCell()
