@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     
     //MARK: - Properties of class
     @IBOutlet weak var collectionView: UICollectionView!
-    var colorStr : UIColor?
     var items = [Amazon]()
     
     var taboolaWidget : TaboolaView!
@@ -84,22 +83,19 @@ class ViewController: UIViewController {
     
     @objc func willEnterForeground() {
         if let customColor = UIPasteboard.general.color {
-            colorStr = customColor
+            setColor(color: customColor)
         }
-        setColor()
-    }
-    fileprivate func setColor() {
         
-        if let color = colorStr {
+    }
+    fileprivate func setColor(color: UIColor) {
+        
 
             self.collectionView.backgroundColor = color
             self.taboolaWidget.backgroundColor = color
             self.taboolaFeed.backgroundColor = color
             
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
-        }
+
+        
     }
     fileprivate func fetchJSON() {
         //let urlString = "https://s3-us-west-2.amazonaws.com/taboola-mobile-sdk/public/home_assignment/data.json"
@@ -159,18 +155,12 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         return self.items.count
     }
 
-    
-    
-    
-    
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.row {
         case TaboolaRow.widget.index:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TaboolaCell", for: indexPath) as? TaboolaCell ?? TaboolaCell()
-            taboolaWidget.backgroundColor = colorStr
             cell.contentView.addSubview(taboolaWidget)
-            cell.backgroundColor = colorStr
             return cell
         case TaboolaRow.feed.index:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TaboolaCell", for: indexPath) as? TaboolaCell ?? TaboolaCell()
